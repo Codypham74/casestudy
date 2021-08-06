@@ -1,0 +1,236 @@
+*{margin: 0px; padding: 0px; font-family: 'bookman', sans-serif; box-sizing: border-box;}
+/*cover*/
+
+header{
+    background: linear-gradient(#05f2db,#05f2c7);
+}
+.navbar-brand {
+    padding-left:  8rem;
+}
+.nav-item:last-child {
+    padding-right:  10rem;
+}
+.nav-item {
+    padding: 0.9rem;
+}
+.nav-link:hover {
+    color:#05f2db;
+}
+
+header nav a {
+    color: white;
+}
+header .container a{
+    color: black;
+}
+
+header .row .col-md-7{
+    padding: 22vmin 1vmin;
+    padding-bottom: 35vmin;
+}
+header .row .col-md-5{
+    padding: 4.2vmin 1vmin;
+}
+header .container .col-md-7 h6{
+    padding: 1vmin;
+    letter-spacing: 4px;
+}
+header .container .col-md-7 h1{
+    padding: 0.1em 0em;
+    font-size: 8.5vmin;
+    font-weight: bold;
+}
+header .row .col-md-5 img{
+    width: 80%;
+}
+header .container .col-md-7 p{
+    padding: 1vmin 5vmin
+}
+header .btn{
+     background: white;
+     color: black;
+     font-weight: bolder;
+}
+.primary-btn {
+    border-radius: 30px;
+    font-weight: bold;
+}
+/*kết thúc cover*/
+/*nút lên đầu trang*/
+#myBtn {
+display: none;
+position: fixed;
+bottom: 60px;
+right: 10px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: #fff;
+border: 2px solid #ccc;
+color: white;
+cursor: pointer;
+border-radius: 30px;
+opacity: 0.7;
+}
+
+#myBtn:hover {
+background-color: #f1f1f1;
+}
+/*phần giới thiệu*/
+.intro{
+    padding: 20vmin 0vmin;
+}
+.intro .row .col-md-6 img {
+    opacity: 0.8;
+    width: 80%;
+    border-radius: 0.2em;
+}
+.intro .row .col-md-6:last-child {
+    position: relative;
+}
+.intro .row .col-md-6 .panel {
+    position: absolute;
+    background: linear-gradient(#05f2db,#05f2c7);
+    border-radius: 3px;
+    text-align: left;
+     box-shadow: 0px 28px 52px #00000073;
+    z-index: 1;
+    top: 7vmin;
+    left: -18vmin;
+    padding: 13vmin 5vmin 20vmin 10vmin;
+}
+.intro .row .col-md-6 .panel{
+    opacity: 1;
+}
+/*Kết Thúc Giới Thiệu*/
+/*Phần Menu bestsale */
+.menu{
+    margin: 15vmin 15vmin;
+}
+.card{
+    padding: 1vmin 1vmin;
+    margin: 1vmin 3.5vmin;
+}
+.menu .row{
+    background: linear-gradient(#05f2db,#05f2c7);
+}
+main .btn{
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    background: linear-gradient(#05f2db,#05f2c7);
+}
+/*Kết Thúc menu bestsale*/
+/*Đánh giá từ KH*/
+.review .container h1 {
+    font-size: 6vmin;
+    padding-top: 14vmin;
+}
+
+.review .team {
+    padding: 10vmin 4vmin;
+}
+
+.review .card {
+    width: 22em;
+    margin-top: 10vmin;
+}
+
+.review .card .card-text {
+    padding: 0.5em;
+}
+
+.review .card-body a {
+    font-size: 1.5em;
+}
+
+.review .carousel-item {
+    padding-left: 3rem;
+}
+.review {
+    padding-bottom: 10vmin;
+}
+
+.border-radius {
+    border-radius: 50%;
+    width: 60%;
+}
+/*Kết Thức Đánh giá KH*/
+/*Phần Chân Trang*/
+footer {
+    background: linear-gradient(#05f2db,#05f2c7);
+    padding: 14vmin 18vmin;
+}
+
+footer p span {
+    color: #ff512f
+}
+
+footer input {
+    border: none !important;
+}
+
+footer input::placeholder {
+    color: white !important;
+}
+
+footer .input-group .input-group-text {
+    background:  linear-gradient(#05f2db,#05f2c7);
+}
+
+footer .column i {
+    color: #dd2476;
+}
+
+footer .column i {
+    padding: 0 0.5em;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.815);
+    z-index: 9999;
+    transition: all 1.5s ease;
+}
+/*kết thúc chân trang*/
+
+
+/*phần hiển thị màn hình tab và mobile*/
+@media only screen and (max-width: 768px) {
+    .navbar-brand {
+        padding-left: 1rem;
+    }
+
+    .intro .row .col-md-6 .panel {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .intro .cover {
+        background-position: -25vmin -10vmin;
+    }
+
+   
+    .review .carousel-item {
+        padding-left: 0.6rem;
+    }
+
+    footer .row .col-md-2 {
+        margin-top: 8vmin;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .review .card {
+        width: 18em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .review .carousel-inner {
+        margin-left: -4vmin;
+    }
+}

@@ -8,6 +8,13 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="style.css">
 	
+	 <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
 </head>
 <body>
 <!-- Phần cover -->
@@ -15,24 +22,28 @@
 <!-- Phần Menu -->
 		<div id="container-fluid p-0">
 			<nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#"><img src="images/Logo2.png" width="40px" height="40px">
-                    Sa Pô Chê
+                <a class="navbar-brand" href="#"><img src="images/Logo2.png" width="50px" height="50px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-align-right text-light"></i>
                 </button>
             
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="mr-auto"></div>
-	                <ul class="navbar-nav">
+                    <div class="mr-auto "></div>
+	                <ul class="navbar-nav ">
 	                    <li class="nav-item active">
-	                    <a class="nav-link" href="#">Trang Chủ</a>
+	                    <a class="nav-link btn" href="#">Trang Chủ</a>
 	                    </li>
 	                    <li class="nav-item">
-	                        <a class="nav-link" href="#">Về Chúng Tôi</a>
+	                        <a class="nav-link btn" href="#aboutus">Về Chúng Tôi</a>
 	                    </li>
-	                    <li class="nav-item dropdown">
-	                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                    </li>
+	                     <li class="nav-item">
+	                        <a class="nav-link btn" href="#bestsale">Thực Đơn</a>
+	                    </li>
+
+	                   <!--  <li class="nav-item dropdown">
+	                    <a class="nav-link btn" href="#bestsale" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                        Thực Đơn
 	                    </a>
 	                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,10 +51,13 @@
 	                        <a class="dropdown-item" href="#">Nhẹ Bụng</a>
 	                        <a class="dropdown-item" href="#">No Bụng</a>
 	                        <a class="dropdown-item" href="#">Vui Mồm</a>
-	                    </div>
+	                    </div> -->
+	                    </li>
+	                     <li class="nav-item">
+	                        <a class="nav-link btn" href="#review">Đánh Giá</a>
 	                    </li>
 	                    <li class="nav-item">
-	                        <a class="nav-link" href="#">Liên Hệ</a>
+	                        <a class="nav-link btn" href="lienhe.html">Liên Hệ</a>
 	                    </li>
 	                </ul>
                 </div>
@@ -62,15 +76,32 @@
 	            </div>
 	            <div class="col-md-5 col-sm-12">
 	                <img src="images/mytuongden.jpg">
-	            </div>
+				</div>
 	        </div>    		
 		</div>
 <!-- Kết Thúc Heading -->		
 	</header>
+	<button id="myBtn" title="Lên đầu trang"><img src='images/uparrow.png' title='lên đầu trang' width='30px'/></button>
+	<script>
+	window.onscroll = function() {scrollFunction()};
+	function scrollFunction() {
+
+	if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+	document.getElementById("myBtn").style.display = "block";
+	} else {
+	document.getElementById("myBtn").style.display = "none";
+	}
+	}
+
+	document.getElementById('myBtn').addEventListener("click", function(){
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+	});
+	</script>
 <!-- kết thúc cover-->
 	<main>
 	<!-- Phàn giới thiệu -->	
-		<section class="intro">
+		<section id="aboutus" class="intro">
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-6 col-12">
@@ -96,14 +127,14 @@
         </section>
 	<!-- kết thúc giới thiệu -->
 	<!-- Menu best sale -->
-		<section class="menu p-0">
+		<section id="bestsale" class="menu p-0">
 				<div class="container">
 					<blockquote class="blockquote text-right">
 	 					<p class="mb-0">Món Ăn Được Yêu Thích Nhất Tại Sa Pô Chê</p>
 	  					<p class="blockquote-footer">Được đánh giá bởi<cite title="Source Title"> Khách Hàng</cite></p>
 					</blockquote>
 				</div>				
-				<div class="row d-flex flex-wrap justify-content-center">
+				<div class="row d-flex flex-wrap justify-content-center d-inline-block shadow-lg">
 					<div class="card" style="width: 15rem;">
 						<img src="images/mytuongden1.jpg" class="card-img-top" alt="mytuongden">
 					  	<div class="card-body">
@@ -116,15 +147,15 @@
 						<img src="images/mychuacay.jpg" class="card-img-top" alt="mychuacay">
 					  	<div class="card-body">
 						    <h5 class="card-title">Mỳ Chua Cay</h5>
-						    <p class="card-text"></p>
+						    <p class="card-text">Sợi mỳ Hàn Quốc kết hợp nước sốt được nấu theo công thức đặc trưng của riêng #sapoche </p>
 						    <a href="#" class="btn">Đặt Hàng</a>
 					  	</div>
 					</div>
 					<div class="card" style="width: 15rem;">
-						<img src="images/pate1.jpg" class="card-img-top" alt="pate">
+						<img src="images/pate.jpg" class="card-img-top" alt="pate">
 					  	<div class="card-body">
-						    <h5 class="card-title">Pate Gia Truyền </h5>
-						    <p class="card-text"></p>
+						    <h5 class="card-title">Nem Thính </h5>
+						    <p class="card-text">Món ăn cuốn kết hợp với bí quyết nước chấm mà mọi khách hàng đều yêu thích</p>
 						    <a href="#" class="btn">Đặt Hàng</a>
 					  	</div>
 					</div>
@@ -132,17 +163,106 @@
 						<img src="images/mien.jpg" class="card-img-top" alt="mien">
 					  	<div class="card-body">
 						    <h5 class="card-title">Miến #Chê Trộn Bò</h5>
-						    <p class="card-text"></p>
+						    <p class="card-text">"1 chú đồ ăn siêu ngon" đây là phản hồi nhiều nhất của món ăn đặc biệt nhà Chê</p>
 						    <a href="#" class="btn">Đặt Hàng</a>
 					  	</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
 <!-- kết thúc menu best Sales -->
 <!-- Khách Hàng Đánh Giá -->
-		<section>
+		<section id=review>
 			
+            <div class="container text-center">
+                <h1>Khách Hàng Nói Về Sa Pô Chê</h1>
+                <p>Cà Kê Sống Chậm - Chốn Để Trốn.</p>
+            </div>
+            <div class="team row d-flex align-content-stretch flex-wrap">
+                <div class="col-md-4 col-12 text-center ">
+                    <div class="card mr-2 d-inline-block shadow-lg ">
+                        <div class="card-img-top ">
+                            <img src="images/manhrobbie.jpg" class="img-fluid p-4 border-radius">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Mạnh Robbie</h3>
+                            <p class="card-text">
+                                🍝 Là một quán kiêm bán cả đồ ăn và đồ uống nên menu của quán khá đa dạng. Đặc biệt là menu mì trộn và tok giá cực yêu ở đây. Tui gọi một mì đen và mì trộn siêu cay, bát mì nóng hổi được quán làm bưng bê tận nơi, mì ở đây tui đánh giá là sợi mì ăn liền của mì gói Hàn Quốc nhưng ăn cực kỳ ổn do có topping hành tây, cà rốt, xúc xích, thịt và trứng ốp.<br>
+                                👏🏻 Ngoài ra do mì siêu cay của tui bị quán làm nhầm thành mì chua cay nên quán có đền bù thêm bát mì cay, do đó 10 điểm cho phong cách phục vụ của quán và anh chủ nhiệt tình
+                            </p>
+                            <a href='https://www.instagram.com/p/COZZBP8A2HK/?utm_source=ig_web_copy_link' class="text-secondary text-decoration-none btn">
+                                Chi Tiết
+                            </a>
+                            <p class="text-secondary">Photo Review</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card mr-2 d-inline-block shadow">
+                                    <div class="card-img-top ">
+                                        <img src="images/2.jpg" class="img-fluid p-4 border-radius">
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">Phạm Thu Hiền</h3>
+                                        <p class="card-text">
+                                           Ăn nhiều rồi nhưng hôm nay mới nổi hứng review. Đây hoàn toàn là bài review chứ không có quảng cáo pr gì nha. Mình có ăn mì trộn nhiều quán rồi nhưng có lẽ mì ở Sa Pô Chê là mình thấy ưng cái bụng nhất. 1 bát mì với giá chỉ từ 25k mà đầy ú ụ topping, Size to thì thêm 5k nhưng ăn size vừa mình đã no không thở nổi rồi 🤣🤣 Nước sốt đậm đà kèm quả trứng lòng đào kia thì ối dồi ôi nhức nách.
+                                           Đồ uống thì rẻ nhưng cũng khá ok. Nói chung so với mặt bằng chung thì giá ở đây khá rẻ. Song song với giá rẻ là chất lượng đồ ăn và a/chị chủ dễ thương.😘
+                                        </p>
+                                        <a href='https://www.facebook.com/groups/143389902960091/user/100012227200734' class="text-secondary text-decoration-none btn">
+                                            Chi Tiết
+                                        </a>
+                                        <p class="text-secondary">Owner tại S U G O I</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card mr-2 d-inline-block shadow-lg ">
+                                    <div class="card-img-top ">
+                                        <img src="images/phamhaanh.jpg" class="img-fluid w-50 p-4 border-radius">
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">Phạm Hà Anh</h3>
+                                        <p class="card-text">
+                                        Trong tất cả các món tụi mình thử thì tok cay truyền thống là ngon nhứt.<br>
+										Còn về phần tương đen của 2 món kia thì nước sốt tương đen thơm và không bị nồng mùi quá đâu nha, nên là rất dễ ăn 
+										Mình chỉ tiếc là nó bị nhạt hơn so với khẩu vị của mình thôi nếu như mọi thứ mặn hơn chút là đúng kiểu perfect luôn. <br> 
+										👉 Vì quán chỉ có hai vợ chồng làm thôi nên đồ lên khá lâu, cho nên mọi người gọi đồ thì ráng đợi nha ! Trong lúc đó chúng ta có thể ngồi cà kê tám chuyện với nhau để giết thời gian cũng được đó chứ 🤣. Bởi chờ đợi là hạnh phúc mà :3 
+										Menu mình sẽ để ở cuối cho mọi người tham khảo nha
+                                        <a href='https://www.instagram.com/p/CHIx7VLADfN/?utm_source=ig_web_copy_link' class="text-secondary text-decoration-none btn">
+                                            Chi Tiết
+                                        </a>
+                                        <p class="text-secondary">HaiPhong food reviewer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <div class="card mr-2 d-inline-block shadow-lg">
+                        <div class="card-img-top">
+                            <img src="Images/3.jpg" class="img-fluid p-4 border-radius">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Vũ Thu Hằng</h3>
+                            <p class="card-text">
+                              	Đầu tiên nhận xét về view. View đẹp phù hợp để sống ảo 😍😍😍<br>
+								Về đồ ăn, mình gọi mì tương đen, mì trộn chua cay, tok cay, khoai lang kén và trà đào thạch. Tất cả đều ngon nhưng tok và Trà đào mình ấn tượng nhất. Trà đào mình thấy ngon, thơm mùi đào và ngậy vị sữa; tok thơm đậm vị; mì tương đen ăn thơm, không nặng mùi mắm như nhiều chỗ mình ăn; mì cay thơm, giống mì trộn tương ớt Hàn Quốc. Quan trọng là đồ ăn bên quán siêu rẻ, bát mình ăn size L 30k mà to oạch luôn ý 😆😆😆 Mình và em gái không ăn hết phải gói mang về<br>
+								 
+                            </p>
+                            <a href='#' class="text-secondary text-decoration-none btn">
+                                Chi Tiết
+                            </a>
+                            <p class="text-secondary">Giáo Viên</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
 		</section>
 <!-- Kết Thúc Đánh Giá -->
 	</main>
@@ -178,7 +298,7 @@
                     <h4 class="text-light">Follow Us</h4>
                     <p class="text-muted">Let us be social</p>
                     <div class="text-light">
-                        <i class="fab fa-facebook-f"><a href="https://www.facebook.com/Sapoche134"></a></i>
+                        <i class="fab fa-facebook-f"></i>
                         <i class="fab fa-instagram"></i>                        
                     </div>
                 </div>
